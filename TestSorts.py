@@ -1,3 +1,6 @@
+#Alumnas: Allison Centeno y Wuidiana Ramos
+
+
 import time
 import random
 import sys
@@ -5,19 +8,23 @@ from Sorts import MergeSort
 from Busquedas import InsertionSort
 
 
-A=[29,41,32,54,4,0,22,1,7,14]
-n=10
 
-random.shuffle(A)
-inicio=time.time()
+n= int(sys.argv[2])				#esta línea guarda cual sera el tamaño del arreglo
+A=[]
 
-if sys.argv[1]== str(MergeSort):
+for i in range(n):							#generamos nuestro arreglo de numeros aleatorios
+	A.append(random.randint(1,1000))
+
+inicio=time.time()							#comenzamos a tomar el tiempo que durara el respectivo algoritmo escogido
+
+if sys.argv[1]== str(MergeSort):				#verificamos cual algoritmo de ordenamiento se eligio
 		MergeSort(A,0,len(A)-1)
 elif sys.argv[1]== str(InsertionSort):
 		InsertionSort(A,0,len(A)-1)
 		
-fin=time.time()
-tiempo = (fin-inicio) * 1000
+fin=time.time()								#tiempo de finalizacion
+tiempo = (fin-inicio) * 1000				#colocamos el tiempo en milisegundos
 
-print(sys.argv[1], n, tiempo)
+print(A)								#nuestro arreglo con numeros aleatorios
+print(sys.argv[1], n, tiempo)			#las respectivas salidas pedidas	
 
