@@ -31,7 +31,7 @@ def BusquedaBinaria(arreglo, x, n):
 		return None
 
 
-def InsertionSort(arreglo,p,r):
+def InsertionSort(arreglo,p,r):   	#Algoritmo de ordenamiento
 
 	for j in range(p+1,r+1):
 		key= arreglo[j]
