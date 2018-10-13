@@ -23,8 +23,3 @@ def merge(A,p,medio,r):
 			j+=1
 
 			
-#Array=[5,2,4,6,1,3]
-#print(Array)
-#MergeSort(Array,0,len(Array)-1)
-#print(Array)
-
